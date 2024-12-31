@@ -18,8 +18,8 @@ connectCloudinary();
 app.use(express.json());
 // app.use(cors());
 const allowedOrigins = [
-  'https://yourfrontend.vercel.app', 
-  'https://youradmin.vercel.app'
+  'https://netrenzo-frontend.vercel.app', 
+  'https://netrenzo-admin.vercel.app'
 ];
 
 app.use(cors({
