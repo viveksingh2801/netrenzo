@@ -16,21 +16,7 @@ connectCloudinary();
 
 //middleware
 app.use(express.json());
-// app.use(cors());
-const allowedOrigins = [
-  'https://netrenzo-frontend.vercel.app', 
-  'https://netrenzo-admin.vercel.app'
-];
-
-app.use(cors({
-  origin: (origin, callback) => {
-    if (!origin || allowedOrigins.includes(origin)) {
-      callback(null, true); // Allow request
-    } else {
-      callback(new Error('Not allowed by CORS'));
-    }
-  },
-}));
+app.use(cors());
 
 //api endpoints
 app.use("/api/user", userRouter);
